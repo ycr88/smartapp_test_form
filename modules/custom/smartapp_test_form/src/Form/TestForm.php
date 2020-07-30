@@ -100,7 +100,7 @@ function TestForm_mail($key, &$message, $params) {
   $send = true;
   $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
   if ( ! $result['result']) {
-    $message = t('There was a problem sending your email notification to @email for creating node @subject.', array('@name'=>'@email' => $to, '@subject'=>$params['subject']));
+    $message = t('There was a problem sending your email notification to @email about @subject.', array('@name'=>'@email' => $to, '@subject'=>$params['subject']));
 /**
 *TODO redirect error page
 */
@@ -108,7 +108,13 @@ function TestForm_mail($key, &$message, $params) {
     \Drupal::logger($module)->error($message);
     return;
   }
-    drupal_set_message( $this->t("Your name is ") . $form_state->getValue('firstname'));
+  $message = t('Your email notification to @email about @subject was sended.', array('@name'=>'@email' => $to, '@subject'=>$params['subject']));
+/**
+*TODO redirect error page
+*/
+  drupal_set_message($message, 'status');
+  \Drupal::logger($module)->notice($message);
+drupal_set_message( $this->t("Your name is ") . $form_state->getValue('firstname'));
   }
 
 }
