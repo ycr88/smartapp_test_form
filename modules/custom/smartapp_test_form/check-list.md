@@ -1,11 +1,11 @@
 # Use Drupal 8
 
 ## [DONE] Create custom form with fields (use Drupal API):
--[x] First Name : text
--[x] Last Name : text
--[x] Subject : text(plain)
--[x] Message : text(formatted, long)
--[x] E-mail : email
+- [x] First Name : text
+- [x] Last Name : text
+- [x] Subject : text(plain)
+- [x] Message : text(formatted, long)
+- [x] E-mail : email
 
 ## Form submit:
 - [x] Send mail (subject and message from configuration form)
@@ -19,6 +19,6 @@
 (example@site.com – ok, example@test - wrong)
 
 ### General Requirements:
--[x] Implement everything in custom module
--[x] Create repository with completed test task
--[x] Add all config files to repository
+- [x] Implement everything in custom module
+- [x] Create repository with completed test task
+- [x] Add all config files to repository
