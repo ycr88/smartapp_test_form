@@ -1,0 +1,4 @@
+name: SmartApp test form
+description: From with validation and connection with Hubspot module
+type: module
+core: 8.x

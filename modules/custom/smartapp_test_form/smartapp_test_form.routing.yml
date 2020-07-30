@@ -1,0 +1,7 @@
+TestFormsmartapp_simple_form.test_form:
+  path: 'test-form'
+  defaults:
+    _form: '\Drupal\smartapp_test_form\Form\TestForm'
+    _title: 'Contact us'
+  requirements:
+    _permission: 'access content'
